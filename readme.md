@@ -810,3 +810,14 @@ public class MoveWay : MonoBehaviour
 ![Unity](https://github.com/shames9/Unity/blob/main/images/8b2ab69a1e21cb0b841ac56aa9b3eff.png)
 ![Unity](https://github.com/shames9/Unity/blob/main/images/61efc846e23d07092a4a248a0b17bc9.png)
 ![Unity](https://github.com/shames9/Unity/blob/main/images/e5a2983d8e12748c6afbfa3ed94abb4.png)
+
+### Integration and Trial Play
+![Unity](https://github.com/shames9/Unity/blob/main/images/3f250547e348759afd2dee5db71cbdf.png)
+![Unity](https://github.com/shames9/Unity/blob/main/images/0f82ad70cd807686636fce339982570.jpg)
+
+## Conclusions and reflections
+After I had completed this part of the project I found that there were many difficulties and problems with the process and many steps that wasted a lot of time to implement.
+1. When implementing the maze floor tile generation, at first I was thinking of achieving the transformation from transparent to normal material by replacing the floor tile material, and also by setting the empty set and triggering the collider to achieve this function.
+2.There are many different types of code and ways to control the movement of the characters, and testing the code with models from the unity shop is likely to cause bugs when the animation part is not compatible with the code.
+3. In the final pass feedback to the ardunio section, I did not find the exact location of the script, so the LEDs did not light up as expected after the pass.
+Over the next summer, I will be looking into the problem and continuing to learn unity to make the project better.
