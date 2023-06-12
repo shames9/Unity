@@ -85,7 +85,140 @@ if (digitalRead(butPin5) == LOW) {
 ![Unity](https://github.com/shames9/Unity/blob/main/images/24de1e468ac924b0f7e9e7cc11f4abe.jpg)
 
 
-### Unity-UI
+### Demo&Developmet
+I then started by creating a scene in unity along with characters and character animations. The unity code was written so that my unity could read the signals from my serial port COM3 to control the movement of the characters in unity.
+```ruby
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.IO.Ports;
+public class mama : MonoBehaviour
+
+{
+    // public GameObject gameOverCanvas;
+
+    //  private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.CompareTag("Player")) // 假设玩家对象具有"Player"标签
+    //     {
+    //         ShowGameOver();
+    //     }
+    // }
+    SerialPort sp = new SerialPort("COM3", 9600); // 设置连接到计算机上的 Arduino 的端口
+    private int receivedByte = 0; // 存储读取的字节
+   // private Animator _animator;
+
+    float horizontal;
+    float vertical;
+    // Start is called before the first frame update
+    void Start()
+    {
+        sp.Open();
+        sp.ReadTimeout = 1;
+
+   //     _animator = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //  if (Input.GetKeyDown(KeyCode.R))
+        // {
+        //     RestartGame();
+        // }
+    
+    
+
+        if (sp.IsOpen)
+        {
+            try
+            {
+                if (sp.BytesToRead > 0)
+                {
+                    receivedByte = sp.ReadByte();
+                    Debug.Log("Received Byte: " + receivedByte); // 调试语句
+                }
+                else
+                {
+                    horizontal =0;
+                    vertical =0;
+                }
+
+                if (receivedByte == 1)
+                {
+                    horizontal =1;
+                    Debug.Log("按钮1");
+                }
+                else if (receivedByte == 2)
+                {
+                    horizontal =-1;
+                    Debug.Log("按钮2");
+                }
+                else if (receivedByte == 3 || receivedByte == 5)
+                {
+                    vertical =1;
+                    Debug.Log("按钮3");
+                }
+                else if (receivedByte == 4)
+                {
+                    vertical =-1;
+                    Debug.Log("按钮4");
+                }
+
+                // 重置 receivedByte
+                receivedByte = 0;
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError("Error: " + ex.Message);
+            }          
+        }
+
+        // float horizontal = Input.GetAxis("Horizontal");
+        // float vertical = Input.GetAxis("Vertical");
+        Vector3 dir = new Vector3(horizontal, 0, vertical);
+        //float moveSpeed = 5f; // 设置移动速度，可以根据需求调整
+
+        if (dir != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(dir);
+         //   _animator.SetBool("isRun", true);
+         //  Debug.Log(_animator.GetBool("isRun"));
+             transform.Translate(Vector3.forward  * Time.deltaTime);
+        }
+        else
+        {
+          //  _animator.SetBool("isRun", false);
+          //  Debug.Log(_animator.GetBool("isRun"));
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+         //   _animator.SetTrigger("Jump-up");
+            StartCoroutine(TriggerJumpFloat());
+        }
+    }
+
+    IEnumerator TriggerJumpFloat()
+    {
+        yield return new WaitForSeconds(0.5f); // 调整等待时间
+       // _animator.SetTrigger("Jump-float");
+        yield return new WaitForSeconds(0.5f); // 调整等待时间
+       // _animator.SetTrigger("Jump-down");
+    }
+
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.CompareTag("brick"))
+    //     {
+    //         Debug.Log("碰撞碰撞碰撞碰撞碰撞碰撞碰撞碰撞碰撞碰撞");
+    //         // 在碰撞发生的位置生成砖块
+    //         //Instantiate(brickPrefab, this.transform.position, Quaternion.identity);
+    //     }
+    // }
+}
+```
+
 
 ### Unity-Sound
 
