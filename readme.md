@@ -19,7 +19,8 @@ In a mysterious space station, scientists have conducted a ground-breaking exper
 ## What I did
 ### Character controller
 I have used ardunio and switch buttons to create a simple task controller.
-...const int butPin1 = 6;
+```ruby
+const int butPin1 = 6;
 const int butPin2 = 7;
 const int butPin3 = 4;
 const int butPin4 = 5;
@@ -80,7 +81,7 @@ if (digitalRead(butPin5) == LOW) {
 }
 
 }
-...
+```
 
 
 ### Unity-UI
