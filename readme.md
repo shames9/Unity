@@ -636,7 +636,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 // The script also contains a number of auxiliary methods, such as scaling the character's capsule collider to fit a crouched state, preventing the character's head from hitting a low ceiling, and detecting whether the character is on the ground.
 ```
-
+![Unity](https://github.com/shames9/Unity/blob/main/images/99b167fd84523bd14cfb59b53ac2ece.png)
 
 ### Generation of labyrinth floor tiles
 ```ruby
@@ -807,4 +807,4 @@ public class MoveWay : MonoBehaviour
 
 // In the Update() method, additional logic or controls can be added to handle each frame of the operation
 ```
-
+![Unity]
