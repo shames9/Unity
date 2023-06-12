@@ -1,5 +1,5 @@
 # Misshapen Space
-Collaborative project with Songyang Shao
+Collaborative project with Danqi Wang
 
 ## Original work link
 As the Unity files are too large to upload to GitHub, we use Google Drive instead, please click on the link below to visit the original work.
