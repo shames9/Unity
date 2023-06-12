@@ -817,3 +817,6 @@ public class MoveWay : MonoBehaviour
 
 ## Conclusions and reflections
 After I had completed this part of the project I found that there were many difficulties and problems with the process and many steps that wasted a lot of time to implement. When implementing the maze floor tile generation, at first I was thinking of achieving the transformation from transparent to normal material by replacing the floor tile material, and also by setting the empty set and triggering the collider to achieve this function.There are many different types of code and ways to control the movement of the characters, and testing the code with models from the unity shop is likely to cause bugs when the animation part is not compatible with the code.In the final pass feedback to the ardunio section, I did not find the exact location of the script, so the LEDs did not light up as expected after the pass.Over the next summer, I will be looking into the problem and continuing to learn unity to make the project better.
+
+## References
+https://www.bilibili.com/video/BV1i8411N7t5/?spm_id_from=333.337.search-card.all.click&vd_source=17e3a8f07de6af49134af2a1810ce4da
