@@ -807,4 +807,6 @@ public class MoveWay : MonoBehaviour
 
 // In the Update() method, additional logic or controls can be added to handle each frame of the operation
 ```
-![Unity]
+![Unity](https://github.com/shames9/Unity/blob/main/images/8b2ab69a1e21cb0b841ac56aa9b3eff.png)
+![Unity](https://github.com/shames9/Unity/blob/main/images/61efc846e23d07092a4a248a0b17bc9.png)
+![Unity](https://github.com/shames9/Unity/blob/main/images/e5a2983d8e12748c6afbfa3ed94abb4.png)
